@@ -50,6 +50,7 @@ nav.navbar {
     width: 100%;
     height: auto;
     position: absolute;;
+    border-radius: 0 0 4% 4%;
     z-index: -10;
     background-attachment: fixed;
 
@@ -77,6 +78,10 @@ nav.navbar {
 .aboutme, .abilities {
     width: 90%;
     margin-left: 5%;
+}
+
+#aboutme, #abilities {
+    padding-top: 5%;
 }
 
 .list-group {
