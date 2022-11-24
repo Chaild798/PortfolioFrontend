@@ -4,71 +4,136 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/740b9ce838.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
     <title>Chaild</title>
 </head>
 <body>
-    <header>
-        <div>
-            <img src="spinel.jpg" alt="Chaild">
-            <h1>Chaild</h1>
-            <p>Estudiante de Ingenieria en Informática</p>
-        </div>
-    </header>
-    <section>
-        <div>
-            <h2>Sobre mí</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, minus accusantium non et exercitationem sint rerum repellat commodi, laborum, eveniet quas libero perferendis illum porro iste alias! Quidem, omnis nesciunt.</p>
-        </div>
-        <div>
-            <h2>Experiencia Laboral</h2>
-        </div>
-        <div>
-            <h2>Educación</h2>
-            <ul>
-                <li>Egresado de la Escuela Superior del Comercio Carlos Pellegrini (2022)</li>
-                <li>Cursante de Argentina Programa #YoProgramo, cohorte 3</li>
-                <li>Estudiante de Ingenieria en Informática por la Universidad de Buenos Aires</li>
-            </ul>
-        </div>
-    </section>
-    <section>
-        <div>
-            <h2>Habilidades</h2>
-            <div>
-                <ul>
-                    <h3>Front End</h3>
-                    <li>1Fe</li>
-                    <li>2Fe</li>
-                    <li>3Fe</li>
+    <!-- seccion de Navbar -->
+    <section id="navbar">       
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <div class="container-fluid">
+                <nav class="navbar bg-light">
+                    <div class="container">
+                      <a class="navbar-brand" href="#">
+                        <img src="assets/img/aplogo.jpg" alt="Argentina Programa" width="80" height="47">
+                      </a>
+                    </div>
+                  </nav>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars fa-3x"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#home">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#aboutme">Acerca de mí</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#abilities">Habilidades</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#projects">Proyectos</a>
+                  </li>
                 </ul>
-                <ul>
-                    <h3>Back End</h3>
-                    <li>1Be</li>
-                    <li>2Be</li>
-                    <li>3Be</li>
-                </ul>
-                <ul>
-                    <h3>Soft Skills</h3>
-                    <li>1Sf</li>
-                    <li>2Sf</li>
-                    <li>3Sf</li>
-                </ul>
+                <ul class="list-group list-group-horizontal">
+                    <li class="list-group-item"><i class="fa-brands fa-github"></i></li>
+                    <li class="list-group-item"><i class="fa-brands fa-linkedin"></i></li>
+                    <li class="list-group-item"><i class="fa-brands fa-facebook"></i></li>
+                </ul>                  
+              </div>
             </div>
+          </nav>
+    </section>
+    <section id="#home">
+      <div class="card banner-card">
+        <div class="card-body banner-card">
+          <img src="assets/img/banner.jpg" class="banner" alt="">
+          <div class="profile-container">
+            <img src="assets/img/spinel.jpg" class="pfp mx-auto d-block" alt="Chaild">
+            <h1 class="text-center display-3"><b>Chaild</b></h1>
+            <p class="text-center h1">Estudiante de Ingenieria en Informática</p>
+          </div>
         </div>
+      </div>
     </section>
-    <section>
-        <h2>Proyectos</h2>
-        <div>Proyecto 1</div>
+    <section id="#aboutme">
+      <div class="card">
+        <div class="card-body">
+          <div class="aboutme">
+            <h2 class="h2"><b>Sobre mí</b></h2>
+            <hr class="border border-danger border-2 opacity-50 title-hr">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio architecto perferendis, necessitatibus veniam aliquid accusamus neque ex facere, tempora vitae maxime nisi beatae quos nam, possimus odit deleniti aspernatur libero.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dolorum odio excepturi quidem facere aut eius accusamus cumque enim voluptatum doloremque corrupti, ab blanditiis fuga molestias accusantium, beatae magnam alias?
+            </p>
+            <div class="container">
+              <div class="row">         
+                <div class="col-6">
+                  <h2 class="h2">Educación</h2>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Egresado de la Escuela Superior del Comercio Carlos Pellegrini</li>
+                    <li class="list-group-item">Cursante de Argentina Programa #YoProgramo, cohorte 3</li>
+                    <li class="list-group-item">Estudiante de Ingenieria en Informática por la UBA</li>
+                  </ul>
+                </div>         
+                <div class="col-6">
+                  <h2 class="h2">Experiencia Laboral</h2>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                  </ul>
+                </div>
+              </div>      
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <nav>
-        <img src="aplogo.png" alt="Argentina Programa">
-        <ul>
-            <li>Inicio</li>
-            <li>Sobre mí</li>
-            <li>Proyectos</li>
-            <li>Contacto</li>
-            <li>Ingresar</li>
-        </ul>
-    </nav>
+    <section id="abilities">
+      <div class="card">
+        <div class="card-body">
+          <div class="abilities">
+            <h2 class="h2"><b>Habilidades</b></h2>
+            <hr class="border border-danger border-2 opacity-50 title-hr">
+            <table class="table">
+              <thead>
+                <tr>
+
+                  <th scope="col">Front-End</th>
+                  <th scope="col">Back-End</th>
+                  <th scope="col">Soft-Skills</th>
+                </tr>
+              </thead>
+              <tbody class="table-group-divider">
+                <tr>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <td colspan="2">Larry the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>                 

@@ -1,0 +1,96 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(8, 5, 24);
+    color: rgb(232, 232, 247);
+}
+
+header {
+    margin: auto;
+}
+
+li {
+    list-style: none;
+}
+
+a:hover, a:visited, a:link, a:active {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+nav.navbar {
+    position: sticky;
+    top: 1px;
+}
+
+.div_header {
+    display: inline-block;
+    position: relative;
+    top: 40%;
+    left: 40%;
+}
+
+.title-hr {
+    width: 25%
+}
+
+.div_header_content{
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center;
+} 
+.pfp {
+    width: 30%;
+    height: 0px auto;
+    border-radius: 50%;
+}
+.banner {
+    width: 100%;
+    height: auto;
+    position: absolute;;
+    z-index: -10;
+    background-attachment: fixed;
+
+}
+.banner-card {
+    background: transparent;
+}
+.card {
+    color: rgb(232, 232, 247);
+    --bs-card-spacer-y: 0;
+    --bs-card-spacer-x: 0;
+    --bs-card-bg: rgb(8, 5, 24);
+}
+
+.profile-container {
+    background-color: rgb(14, 4, 4, 0.5);
+    padding-top: 10%;
+    padding-bottom: 16.5%
+}
+
+.ap_img {
+    max-width: 10px;
+}
+
+.aboutme, .abilities {
+    width: 90%;
+    margin-left: 5%;
+}
+
+.list-group {
+    --bs-list-group-bg: rgba(6, 14, 29, 0.425);
+    --bs-list-group-border-color: rgba(204, 221, 215, 0.521);
+    --bs-list-group-color:rgb(232, 232, 247);
+    border-radius: 3%;
+    border: 3px rgba(204, 221, 215, 0.521) solid
+}
+
+.table {
+    --bs-table-color: rgb(232, 232, 247);
+}
+
+.navbar-toggler {
+    color: rgb(232, 232, 247);
+}
