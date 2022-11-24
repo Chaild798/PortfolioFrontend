@@ -16,18 +16,24 @@
     <section id="navbar">       
         <nav class="navbar navbar-expand-lg bg-dark">
             <div class="container-fluid">
-                <nav class="navbar bg-light">
+                <nav class="navbar bg-dark">
                     <div class="container">
                       <a class="navbar-brand" href="#">
-                        <img src="assets/img/aplogo.jpg" alt="Argentina Programa" width="80" height="47">
+                        <img src="assets/img/aplogo.jpg" alt="Argentina Programa" width="80px" height="auto">
                       </a>
                     </div>
                   </nav>
+                
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fa-solid fa-bars fa-3x"></i>
+                <i class="fa-solid fa-bars fa-2x"></i>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#login-modal">
+                      <i class="fa-solid fa-right-to-bracket"></i>
+                    </button>                    
+                  </li>
                   <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="#home">Inicio</a>
                   </li>
@@ -68,7 +74,13 @@
       <div class="card">
         <div class="card-body">
           <div class="aboutme">
-            <h2 class="h2"><b>Sobre mí</b></h2>
+            <h2 class="h2 ab-title"><b>Sobre mí</b></h2>
+            <button type="button" class="btn btn-primary modal-btn-elmnt" data-bs-toggle="modal" data-bs-target="#deleteAboutMe">
+              <i class="fa-solid fa-circle-xmark"></i>
+            </button>
+            <button type="button" class="btn btn-primary modal-btn-edit" data-bs-toggle="modal" data-bs-target="#updateAboutMe">
+              <i class="fa-solid fa-pen"></i>
+            </button>
             <hr class="border border-danger border-2 opacity-50 title-hr">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio architecto perferendis, necessitatibus veniam aliquid accusamus neque ex facere, tempora vitae maxime nisi beatae quos nam, possimus odit deleniti aspernatur libero.
@@ -79,7 +91,13 @@
               <div class="row">
                 <!-- Columna Responsive para Educación -->
                 <div class="col-sm-6">
-                  <h4 class="h4">Educación</h4>
+                  <h4 class="h4 ab-title">Educación</h4>
+                  <button type="button" class="btn btn-primary modal-btn-elmnt" data-bs-toggle="modal" data-bs-target="#deleteEducation">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                  </button>
+                  <button type="button" class="btn btn-primary modal-btn-edit" data-bs-toggle="modal" data-bs-target="#updateEducation">
+                    <i class="fa-solid fa-pen"></i>
+                  </button>
                     <div class="row">
                       <div class="col-1">
                         <div class="vr"></div>
@@ -95,7 +113,13 @@
                 </div>
                 <!-- Columna Responsive para Experiencia Laboral -->         
                 <div class="col-sm-6">
-                  <h4 class="h4">Experiencia Laboral</h4>
+                  <h4 class="h4 ab-title">Experiencia Laboral</h4>
+                  <button type="button" class="btn btn-primary modal-btn-elmnt" data-bs-toggle="modal" data-bs-target="#deleteExperience">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                  </button>
+                  <button type="button" class="btn btn-primary modal-btn-edit" data-bs-toggle="modal" data-bs-target="#updateExperience">
+                    <i class="fa-solid fa-pen"></i>
+                  </button>
                     <div class="row">
                       <div class="col-1">
                         <div class="vr"></div>
@@ -126,7 +150,13 @@
             <div class="row">
               <!-- Filas para el Fron-End -->         
               <div class="col-sm-4">
-                <h4 class="h4">Front-End</h4>
+                <h4 class="h4 ab-title">Front-End</h4>
+                <button type="button" class="btn btn-primary modal-btn-elmnt" data-bs-toggle="modal" data-bs-target="#deleteFrontEnd">
+                  <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+                <button type="button" class="btn btn-primary modal-btn-edit" data-bs-toggle="modal" data-bs-target="#updateFrontEnd">
+                  <i class="fa-solid fa-pen"></i>
+                </button>
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item">
                     <i class="fa-brands fa-html5"></i> HTML
@@ -156,7 +186,13 @@
               </div>         
               <!-- Filas para el Back-End -->      
               <div class="col-sm-4">
-                <h4 class="h4">Back-End</h4>
+                <h4 class="h4 ab-title">Back-End</h4>
+                <button type="button" class="btn btn-primary modal-btn-elmnt" data-bs-toggle="modal" data-bs-target="#deleteBackEnd">
+                  <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+                <button type="button" class="btn btn-primary modal-btn-edit" data-bs-toggle="modal" data-bs-target="#updateBackEnd">
+                  <i class="fa-solid fa-pen"></i>
+                </button>
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item">
                     <i class="fa-solid fa-database"></i> MySQL
@@ -174,7 +210,13 @@
               </div>
               <!-- Filas para el Soft Skills -->      
               <div class="col-sm-4">
-                <h4 class="h4">Soft-Skills</h4>
+                <h4 class="h4 ab-title">Soft-Skills</h4>
+                <button type="button" class="btn btn-primary modal-btn-elmnt" data-bs-toggle="modal" data-bs-target="#deleteSoftSkills">
+                  <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+                <button type="button" class="btn btn-primary modal-btn-edit" data-bs-toggle="modal" data-bs-target="#updateSoftSkills">
+                  <i class="fa-solid fa-pen"></i>
+                </button>
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item">
                     <i class="fa-solid fa-lightbulb"></i> Resiliencia
@@ -200,8 +242,18 @@
       <div class="card">
         <div class="card-body">
           <div class="projects">
-            <h2 class="h2"><b>Proyectos</b></h2>
+            <h2 class="h2 ab-title"><b>Proyectos</b></h2>
+              <button type="button" class="btn btn-primary modal-btn-elmnt" data-bs-toggle="modal" data-bs-target="#deleteProjects">
+                <i class="fa-solid fa-circle-xmark"></i>
+              </button>
+              <button type="button" class="btn btn-primary modal-btn-edit" data-bs-toggle="modal" data-bs-target="#updateProjects">
+                <i class="fa-solid fa-pen"></i>
+              </button>
             <hr class="border border-danger border-2 opacity-50 title-hr">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio architecto perferendis, necessitatibus veniam aliquid accusamus neque ex facere, tempora vitae maxime nisi beatae quos nam, possimus odit deleniti aspernatur libero.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dolorum odio excepturi quidem facere aut eius accusamus cumque enim voluptatum doloremque corrupti, ab blanditiis fuga molestias accusantium, beatae magnam alias?
+            </p>
             <div class="row">
               <div class="col-sm-6">
                 <div class="card" style="width: 18rem;">
@@ -228,6 +280,440 @@
         </div>
       </div>
     </section>
+
+    <!-- MODALES -->
+
+    <!-- Modal del Login-->
+    <div class="modal fade" id="login-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Iniciar Sesión</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="login-form">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary" form="login-form">Enviar</button>
+          </div>    
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal del delete aboutme-->
+    <div class="modal fade" id="deleteAboutMe" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Eliminar campo</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">
+                  Eliminará el texto de Sobre mí, ¿Está seguro?
+                </label>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver atrás</button>
+            <button type="button" class="btn btn-primary">Eliminar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal del updateAboutMe-->
+    <div class="modal fade" id="updateAboutMe" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Campo</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">
+                  Está editando el texto de Sobre mí:
+                </label>
+                <textarea name="aboutMeInfo" id="aboutMeInfo" cols="30" rows="10"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver atrás</button>
+            <button type="button" class="btn btn-primary">Confirmar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Model del deleteEducation-->
+    <div class="modal fade" id="deleteEducation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Eliminar campo</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">
+                  Eliminará campos de Educacion, ¿Está seguro?
+                </label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver atrás</button>
+            <button type="button" class="btn btn-primary">Eliminar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de updateEducation -->
+    
+    <div class="modal fade" id="updateEducation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Campo</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">
+                  Está editando el texto de Educación:
+                </label>
+                <textarea name="educationInfo" id="educationInfo" cols="30" rows="10"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver atrás</button>
+            <button type="button" class="btn btn-primary">Confirmar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal del deleteExperience-->
+
+    <div class="modal fade" id="deleteExperience" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Eliminar campo</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">
+                  Eliminará campos de Experiencia Laboral, ¿Está seguro?
+                </label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver atrás</button>
+            <button type="button" class="btn btn-primary">Eliminar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de updateExperience -->
+    
+    <div class="modal fade" id="updateExperience" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Campo</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">
+                  Está editando el texto de Exeriencia Laboral:
+                </label>
+                <textarea name="experienceInfo" id="experienceInfo" cols="30" rows="10"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver atrás</button>
+            <button type="button" class="btn btn-primary">Confirmar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal del deleteFrontEnd-->
+
+    <div class="modal fade" id="deleteFrontEnd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Eliminar campo</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">
+                  Eliminará campos de FrontEnd, ¿Está seguro?
+                </label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver atrás</button>
+            <button type="button" class="btn btn-primary">Eliminar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de updateExperience -->
+    
+    <div class="modal fade" id="updateFrontEnd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Campo</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">
+                  Está editando el texto de Front-End:
+                </label>
+                <textarea name="frontEndInfo" id="frontEndInfo" cols="30" rows="10"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver atrás</button>
+            <button type="button" class="btn btn-primary">Confirmar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal del deleteBackEnd-->
+
+    <div class="modal fade" id="deleteBackEnd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Eliminar campo</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">
+                  Eliminará campos de Back-End, ¿Está seguro?
+                </label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver atrás</button>
+            <button type="button" class="btn btn-primary">Eliminar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de updateBackEnd -->
+    
+    <div class="modal fade" id="updateBackEnd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Campo</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">
+                  Está editando el texto de Back-End:
+                </label>
+                <textarea name="backEndInfo" id="backEndInfo" cols="30" rows="10"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver atrás</button>
+            <button type="button" class="btn btn-primary">Confirmar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal del deleteSoftSkills -->
+
+    <div class="modal fade" id="deleteSoftSkills" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Eliminar campo</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">
+                  Eliminará campos de Soft-Skills, ¿Está seguro?
+                </label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver atrás</button>
+            <button type="button" class="btn btn-primary">Eliminar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de updateSoftSkills -->
+    
+    <div class="modal fade" id="updateSoftSkills" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Campo</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">
+                  Está editando el texto de Soft-Skills:
+                </label>
+                <textarea name="softSkillsInfo" id="SoftSkillsInfo" cols="30" rows="10"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver atrás</button>
+            <button type="button" class="btn btn-primary">Confirmar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal del deleteProjects -->
+
+    <div class="modal fade" id="deleteProjects" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Eliminar campo</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">
+                  Eliminará campos de Proyectos, ¿Está seguro?
+                </label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver atrás</button>
+            <button type="button" class="btn btn-primary">Eliminar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de updateProjects -->
+    
+    <div class="modal fade" id="updateProjects" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Campo</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">
+                  Está editando el texto de Proyectos:
+                </label>
+                <textarea name="projectsInfo" id="projectsInfo" cols="30" rows="10"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver atrás</button>
+            <button type="button" class="btn btn-primary">Confirmar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
