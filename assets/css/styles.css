@@ -33,7 +33,8 @@ nav.navbar {
 }
 
 .title-hr {
-    width: 25%
+    width: 25%;
+    margin-bottom: 2em;
 }
 
 .div_header_content{
@@ -68,19 +69,19 @@ nav.navbar {
 .profile-container {
     background-color: rgb(14, 4, 4, 0.5);
     padding-top: 10%;
-    padding-bottom: 16.5%
+    padding-bottom: 16.5%;
 }
 
 .ap_img {
     max-width: 10px;
 }
 
-.aboutme, .abilities {
+.aboutme, .abilities, .projects {
     width: 90%;
     margin-left: 5%;
 }
 
-#aboutme, #abilities {
+#aboutme, #abilities, #projects {
     padding-top: 5%;
 }
 
@@ -99,3 +100,35 @@ nav.navbar {
 .navbar-toggler {
     color: rgb(232, 232, 247);
 }
+
+.progress {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.front-end > .progress-bar {
+    background-color: rgba(231, 22, 186, 0.86);
+}
+
+.back-end > .progress-bar {
+    background-color: rgb(0, 255, 76, 0.86);
+}
+
+.soft-skills > .progress-bar {
+    background-color: rgb(6, 10, 230, 0.86);
+}
+
+.projects .card {
+    margin: auto;
+}
+
+.aboutme .vr {
+    height: 100%;
+    width: 17%;
+    background-color: rgba(231, 22, 186);
+}
+
+.aboutme .list-group {
+    border: none;
+}
+
