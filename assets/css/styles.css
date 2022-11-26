@@ -32,6 +32,16 @@ nav.navbar {
     left: 40%;
 }
 
+.header-section > nav {
+    width: 100%;
+    z-index: 20;
+    top: 0;
+}
+
+#home {
+    margin-top: 100px;
+}
+
 .title-hr {
     width: 25%;
     margin-bottom: 2em;
@@ -54,7 +64,6 @@ nav.navbar {
     border-radius: 0 0 4% 4%;
     z-index: -10;
     background-attachment: fixed;
-
 }
 .banner-card {
     background: transparent;
@@ -65,11 +74,15 @@ nav.navbar {
     --bs-card-spacer-x: 0;
     --bs-card-bg: rgb(8, 5, 24);
 }
+.list-redes {
+    border: none !important;
+}
 
 .profile-container {
     background-color: rgb(14, 4, 4, 0.5);
     padding-top: 10%;
-    padding-bottom: 16.5%;
+    padding-bottom: 18%;
+    width: 100%;
 }
 
 .ap_img {
@@ -142,6 +155,15 @@ nav.navbar {
     margin-bottom: 1%;
 }
 
+.modal-btn-login {
+    background: none;
+    --bs-btn-hover-bg: #none;
+    --bs-btn-active-bg: #none;
+    --bs-btn-border-color: none;
+    --bs-btn-hover-border-color: #none;
+    --bs-btn-active-border-color: #none;
+}
+
 .modal-btn-elmnt {
     color: rgb(209, 14, 14);
     --bs-btn-active-bg: rgb(209, 14, 14);
@@ -152,4 +174,22 @@ nav.navbar {
     color: rgb(6, 194, 22);
     --bs-btn-active-bg: rgb(6, 194, 22);
     --bs-btn-hover-bg: rgb(6, 194, 22);
+}
+
+.modal-content {
+    background-color: rgba(11, 12, 10, 0.829);
+    color: rgb(241, 233, 233);
+    border: 2px solid rgb(218, 25, 208);
+}
+
+@media only screen and (max-width: 500px)  {
+    .profile-container {
+        padding-bottom: 5%;
+    }
+    .abilities .col-sm-4 {
+        margin-top: 20px;
+    }
+    .profile-container {
+        padding-top: 5%;
+    }
 }

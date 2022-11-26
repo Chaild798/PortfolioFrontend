@@ -13,8 +13,8 @@
 </head>
 <body>
     <!-- seccion de Navbar vertical -->
-    <section id="navbar">       
-        <nav class="navbar navbar-expand-lg bg-dark">
+    <section id="home" class="header-section">       
+        <nav class="navbar navbar-expand-lg bg-dark position-fixed">
             <div class="container-fluid">
                 <nav class="navbar bg-dark">
                     <div class="container">
@@ -30,7 +30,7 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#login-modal">
+                    <button type="button" class="btn btn-primary modal-btn-login" data-bs-toggle="modal" data-bs-target="#login-modal">
                       <i class="fa-solid fa-right-to-bracket"></i>
                     </button>                    
                   </li>
@@ -47,7 +47,7 @@
                     <a class="nav-link" href="#projects">Proyectos</a>
                   </li>
                 </ul>
-                <ul class="list-group list-group-horizontal">
+                <ul class="list-group list-group-horizontal list-redes">
                     <li class="list-group-item"><i class="fa-brands fa-github"></i></li>
                     <li class="list-group-item"><i class="fa-brands fa-linkedin"></i></li>
                     <li class="list-group-item"><i class="fa-brands fa-facebook"></i></li>
@@ -56,7 +56,9 @@
             </div>
           </nav>
     </section>
+
     <!-- Seccion de la cabecera -->
+    
     <section id="#home">
       <div class="card banner-card">
         <div class="card-body banner-card">
@@ -69,7 +71,9 @@
         </div>
       </div>
     </section>
+
     <!-- Seccion acerca de mí -->
+
     <section id="aboutme">
       <div class="card">
         <div class="card-body">
@@ -139,7 +143,9 @@
         </div>
       </div>
     </section>
+
     <!-- Seccion de habilidades -->
+
     <section id="abilities">
       <div class="card">
         <div class="card-body">
@@ -237,7 +243,9 @@
         </div>
       </div>
     </section>
+
     <!-- Section de proyectos -->
+
     <section id="projects">
       <div class="card">
         <div class="card-body">
@@ -284,6 +292,7 @@
     <!-- MODALES -->
 
     <!-- Modal del Login-->
+
     <div class="modal fade" id="login-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -310,7 +319,8 @@
       </div>
     </div>
 
-    <!-- Modal del delete aboutme-->
+    <!-- Modal del delete aboutme -->
+
     <div class="modal fade" id="deleteAboutMe" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -335,7 +345,8 @@
       </div>
     </div>
 
-    <!-- Modal del updateAboutMe-->
+    <!-- Modal del updateAboutMe -->
+
     <div class="modal fade" id="updateAboutMe" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -361,7 +372,8 @@
       </div>
     </div>
     
-    <!-- Model del deleteEducation-->
+    <!-- Model del deleteEducation -->
+    
     <div class="modal fade" id="deleteEducation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
