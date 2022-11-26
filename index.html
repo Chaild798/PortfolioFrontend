@@ -67,6 +67,9 @@
             <img src="assets/img/spinel.jpg" class="pfp mx-auto d-block" alt="Chaild">
             <h1 class="text-center display-3"><b>Chaild</b></h1>
             <p class="text-center h3">Estudiante de Ingenieria en Informática</p>
+            <button type="button" class="btn btn-primary modal-btn-edit position-absolute top-25 start-50 translate-middle" data-bs-toggle="modal" data-bs-target="#updateHeader">
+              <i class="fa-solid fa-pen"></i>
+            </button>
           </div>
         </div>
       </div>
@@ -291,7 +294,43 @@
 
     <!-- MODALES -->
 
-    <!-- Modal del Login-->
+    <!-- Modal del Header -->
+
+    <div class="modal fade" id="updateHeader" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar Perfil</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="login-form">
+              <div class="mb-3">
+                <label for="inputName" class="form-label">Nombre</label>
+                <input type="email" class="form-control" id="inputName" aria-describedby="emailHelp">
+              </div>
+              <div class="mb-3">
+                <label for="inputEpigrafe" class="form-label">Epígrafe</label>
+                <input type="password" class="form-control" id="inputEpigrafe">
+              </div>
+              <div class="mb-3">
+                <label for="inputProfilePicture" class="form-label">Foto de Perfil</label>
+                <input type="file" class="form-control" id="inputProfilePicture">
+              </div>
+              <div class="mb-3">
+                <label for="inputBannerPicture" class="form-label">Foto de Banner</label>
+                <input type="file" class="form-control" id="inputBannerPicture">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary" form="login-form">Enviar</button>
+          </div>    
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal del Login -->
 
     <div class="modal fade" id="login-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -360,7 +399,9 @@
                 <label for="exampleInputEmail1" class="form-label">
                   Está editando el texto de Sobre mí:
                 </label>
-                <textarea name="aboutMeInfo" id="aboutMeInfo" cols="30" rows="10"></textarea>
+                <div class="input-group">
+                  <textarea class="form-control" name="aboutMeInfo" aria-label="With textarea"></textarea>
+                </div>
               </div>
             </form>
           </div>
@@ -419,7 +460,9 @@
                 <label for="exampleInputEmail1" class="form-label">
                   Está editando el texto de Educación:
                 </label>
-                <textarea name="educationInfo" id="educationInfo" cols="30" rows="10"></textarea>
+                <div class="input-group">
+                  <textarea class="form-control" name="educationInfo"aria-label="With textarea"></textarea>
+                </div>
               </div>
             </form>
           </div>
@@ -478,7 +521,9 @@
                 <label for="exampleInputEmail1" class="form-label">
                   Está editando el texto de Exeriencia Laboral:
                 </label>
-                <textarea name="experienceInfo" id="experienceInfo" cols="30" rows="10"></textarea>
+                <div class="input-group">
+                  <textarea class="form-control" name="experienceInfo"aria-label="With textarea"></textarea>
+                </div>
               </div>
             </form>
           </div>
@@ -537,7 +582,9 @@
                 <label for="exampleInputEmail1" class="form-label">
                   Está editando el texto de Front-End:
                 </label>
-                <textarea name="frontEndInfo" id="frontEndInfo" cols="30" rows="10"></textarea>
+                <div class="input-group">
+                  <textarea class="form-control" name="frontEndInfo"aria-label="With textarea"></textarea>
+                </div>
               </div>
             </form>
           </div>
@@ -596,7 +643,9 @@
                 <label for="exampleInputEmail1" class="form-label">
                   Está editando el texto de Back-End:
                 </label>
-                <textarea name="backEndInfo" id="backEndInfo" cols="30" rows="10"></textarea>
+                <div class="input-group">
+                  <textarea class="form-control" name="backEndInfo"aria-label="With textarea"></textarea>
+                </div>
               </div>
             </form>
           </div>
@@ -655,7 +704,9 @@
                 <label for="exampleInputEmail1" class="form-label">
                   Está editando el texto de Soft-Skills:
                 </label>
-                <textarea name="softSkillsInfo" id="SoftSkillsInfo" cols="30" rows="10"></textarea>
+                <div class="input-group">
+                  <textarea class="form-control" name="softSkillsInfo"aria-label="With textarea"></textarea>
+                </div>
               </div>
             </form>
           </div>
@@ -714,7 +765,9 @@
                 <label for="exampleInputEmail1" class="form-label">
                   Está editando el texto de Proyectos:
                 </label>
-                <textarea name="projectsInfo" id="projectsInfo" cols="30" rows="10"></textarea>
+                <div class="input-group">
+                  <textarea class="form-control" name="projectsInfo"aria-label="With textarea"></textarea>
+                </div>
               </div>
             </form>
           </div>

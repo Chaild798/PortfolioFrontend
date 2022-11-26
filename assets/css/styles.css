@@ -5,6 +5,7 @@ html {
 body {
     background-color: rgb(8, 5, 24);
     color: rgb(232, 232, 247);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 header {
@@ -174,6 +175,16 @@ nav.navbar {
     color: rgb(6, 194, 22);
     --bs-btn-active-bg: rgb(6, 194, 22);
     --bs-btn-hover-bg: rgb(6, 194, 22);
+}
+
+.profile-container > .modal-btn-edit {
+    color: rgb(6, 194, 22);
+    --bs-btn-active-bg: none;
+    --bs-btn-hover-bg: none;
+}
+
+.profile-container > .modal-btn-edit:hover {
+    color: rgb(232, 232, 247);
 }
 
 .modal-content {
