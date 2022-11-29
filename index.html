@@ -811,11 +811,13 @@
             <form id="login-form">
               <div class="mb-3">
                 <label for="inputProjectName" class="form-label">Nombre del proyecto</label>
-                <input type="email" class="form-control" id="inputProjectName" aria-describedby="emailHelp">
+                <input type="text" class="form-control" id="inputProjectName" aria-describedby="emailHelp">
               </div>
               <div class="mb-3">
                 <label for="inputProjectDescription" class="form-label">Descripcion del proyecto</label>
-                <input type="password" class="form-control" id="inputProjectDescription">
+                <div class="input-group">
+                  <textarea class="form-control" name="inputProjectDescription" aria-label="With textarea"></textarea>
+                </div>
               </div>
               <div class="mb-3">
                 <label for="inpuProyectAttach" class="form-label">Enlace del proyecto</label>
