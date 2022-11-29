@@ -150,7 +150,7 @@ nav.navbar {
     display: inline-block;
 }
 
-.modal-btn-edit, .modal-btn-elmnt {
+.modal-btn-edit, .modal-btn-elmnt, .modal-btn-add {
     background: none;
     border: none;
     margin-bottom: 1%;
@@ -163,6 +163,12 @@ nav.navbar {
     --bs-btn-border-color: none;
     --bs-btn-hover-border-color: #none;
     --bs-btn-active-border-color: #none;
+}
+
+.modal-btn-add {
+    color: rgb(235, 231, 46);
+    --bs-btn-active-bg: rgb(235, 231, 46);
+    --bs-btn-hover-bg: rgba(235, 232, 46, 0.733);
 }
 
 .modal-btn-elmnt {
