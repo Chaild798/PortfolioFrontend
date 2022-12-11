@@ -1,0 +1,220 @@
+<!-- Seccion acerca de mí -->
+
+<section id="aboutme">
+    <div class="card">
+      <div class="card-body">
+        <div class="aboutme">
+          <h2 class="h2 ab-title"><b>Sobre mí</b></h2>
+          <hr class="border border-danger border-2 opacity-50 title-hr">
+
+          <p *ngIf="llamarAboutMeEditable()==false">
+            {{aboutMe}}
+          </p>
+          <p *ngIf="llamarAboutMeEditable()==true" contenteditable="true" style="background-color: rgba(228, 217, 217, 0.596)" id="aboutMeText">
+            {{aboutMe}}
+          </p>
+          <button *ngIf="llamarAboutMeEditable()==false" (click)="alterAboutMeEdit()" type="button" class="btn btn-primary modal-btn-edit about-me-edit">
+            Editar
+          </button>
+          <button *ngIf="llamarAboutMeEditable()==true" (click)="confirmarAlterAboutMeEdit()" type="button" class="btn btn-primary modal-btn-edit about-me-edit">
+            Guardar
+          </button>
+          <button *ngIf="llamarAboutMeEditable()==true" (click)="alterAboutMeEdit()" type="button" class="btn btn-primary modal-btn-elmnt about-me-elmnt">
+            Cancelar
+          </button>
+
+          <!-- Columnas de Bootstrap para poner info -->
+
+          <div class="container">
+            <div class="row">
+              <!-- Columna Responsive para Educación -->
+              <div class="col-sm-6">
+                <h4 class="h4 ab-title">Educación</h4>
+                <button type="button" class="btn btn-primary modal-btn-add" data-bs-toggle="modal" data-bs-target="#addEducation">
+                  <i class="fa-solid fa-square-plus"></i>
+                </button>
+                  <div class="row">
+                    <div class="col-1">
+                      <div class="vr"></div>
+                    </div>
+                    <div class="col-11">
+                      <ul class="list-group list-group-flush">
+
+                        <li *ngFor="let educacion of educationArray; let indice=index;" class="list-group-item" id="education{{indice}}">
+                          <div *ngIf="llamarContentEditable(indice, 'education')==false">
+                            <p>{{educacion}}</p>
+                            <p>{{llamarPeriod('education', indice)}}</p>
+                            <p>{{llamarTitle('education', indice)}}</p>
+                          </div>
+                          <div *ngIf="llamarContentEditable(indice, 'education')==true" contenteditable="true" style="background-color: rgba(228, 217, 217, 0.596)">
+                            <p id="education-editableIns{{indice}}">{{educacion}}</p>
+                            <p id="education-editablePer{{indice}}">{{llamarPeriod('education', indice)}}</p>
+                            <p id="education-editableTit{{indice}}">{{llamarTitle('education', indice)}}</p>
+                          </div>
+                          <button *ngIf="llamarContentEditable(indice, 'education')==false" (click)="alterEdit(indice, 'education')" type="button" class="btn btn-primary modal-btn-edit">
+                            <i class="fa-solid fa-pen"></i>
+                          </button>
+                          <button *ngIf="llamarContentEditable(indice, 'education')==true" (click)="confirmarAlterEdit('education-editableIns'+indice, 'education-editablePer'+indice, 'education-editableTit'+indice, 'education', indice)" type="button" class="btn btn-primary modal-btn-edit">
+                            <i class="fa-solid fa-square-check"></i>
+                          </button>
+                          <button *ngIf="llamarContentEditable(indice, 'education')==false" (click)="eliminateList('education'+indice)" type="button" class="btn btn-primary modal-btn-elmnt">
+                            <i class="fa-solid fa-trash"></i>
+                          </button>
+                          <button *ngIf="llamarContentEditable(indice, 'education')==true" (click)="alterEdit(indice, 'education')" type="button" class="btn btn-primary modal-btn-elmnt">
+                            <i class="fa-solid fa-circle-xmark"></i>
+                          </button>
+                        </li>
+
+                        <li *ngFor="let edu of education;" class="list-group-item">
+                          <p>{{edu.institucion}}</p>
+                          <p>{{edu.periodo}}</p>
+                          <p>{{edu.titulo}}</p>
+                          <button type="button" class="btn btn-primary modal-btn-edit">
+                            <i class="fa-solid fa-pen"></i>
+                          </button>
+                          <button type="button" class="btn btn-primary modal-btn-edit">
+                            <i class="fa-solid fa-square-check"></i>
+                          </button>
+                          <button type="button" class="btn btn-primary modal-btn-elmnt">
+                            <i class="fa-solid fa-trash"></i>
+                          </button>
+                          <button type="button" class="btn btn-primary modal-btn-elmnt">
+                            <i class="fa-solid fa-circle-xmark"></i>
+                          </button>
+                        </li>
+
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+              
+              <!-- Columna Responsive para Experiencia Laboral -->         
+              <div class="col-sm-6">
+              <h4 class="h4 ab-title">Experiencia Laboral</h4>
+              <button type="button" class="btn btn-primary modal-btn-add" data-bs-toggle="modal" data-bs-target="#addExperience">
+                <i class="fa-solid fa-square-plus"></i>
+              </button>
+                <div class="row">
+                  <div class="col-1">
+                    <div class="vr"></div>
+                  </div>
+                  <div class="col-11">
+                    <ul class="list-group list-group-flush">
+
+                      <li *ngFor="let experiencia of experienceArray; let indice=index;" class="list-group-item" id="experience{{indice}}">
+                        <div *ngIf="llamarContentEditable(indice, 'experience')==false">
+                          <p id="experience-editableIns{{indice}}">{{experiencia}}</p>
+                          <p id="experience-editablePer{{indice}}">{{llamarPeriod('experience', indice)}}</p>
+                          <p id="experience-editableTit{{indice}}">{{llamarTitle('experience', indice)}}</p>
+                        </div>
+                        <div *ngIf="llamarContentEditable(indice, 'experience')==true" contenteditable="true" style="background-color: rgba(228, 217, 217, 0.596)">
+                          <p id="experience-editableIns{{indice}}">{{experiencia}}</p>
+                          <p id="experience-editablePer{{indice}}">{{llamarPeriod('experience', indice)}}</p>
+                          <p id="experience-editableTit{{indice}}">{{llamarTitle('experience', indice)}}</p>
+                        </div>
+                        <button *ngIf="llamarContentEditable(indice, 'experience')==false" (click)="alterEdit(indice, 'experience')" type="button" class="btn btn-primary modal-btn-edit">
+                          <i class="fa-solid fa-pen"></i>
+                        </button>
+                        <button *ngIf="llamarContentEditable(indice, 'experience')==true" (click)="confirmarAlterEdit('experience-editableIns'+indice, 'experience-editablePer'+indice, 'experience-editableTit'+indice, 'experience', indice)" type="button" class="btn btn-primary modal-btn-edit">
+                          <i class="fa-solid fa-square-check"></i>
+                        </button>
+                        <button *ngIf="llamarContentEditable(indice, 'experience')==false" (click)="eliminateList('experience'+indice)" type="button" class="btn btn-primary modal-btn-elmnt">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                        <button *ngIf="llamarContentEditable(indice, 'experience')==true" (click)="alterEdit(indice, 'experience')" type="button" class="btn btn-primary modal-btn-elmnt">
+                          <i class="fa-solid fa-circle-xmark"></i>
+                        </button>
+                      </li>
+
+                      <li *ngFor="let trabajo of experiencia;" class="list-group-item">
+                        <p>{{trabajo.institucion}}</p>
+                        <p>{{trabajo.periodo}}</p>
+                        <p>{{trabajo.cargo}}</p>
+                        <button type="button" class="btn btn-primary modal-btn-edit">
+                          <i class="fa-solid fa-pen"></i>
+                        </button>
+                        <button type="button" class="btn btn-primary modal-btn-edit">
+                          <i class="fa-solid fa-square-check"></i>
+                        </button>
+                        <button type="button" class="btn btn-primary modal-btn-elmnt">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                        <button type="button" class="btn btn-primary modal-btn-elmnt">
+                          <i class="fa-solid fa-circle-xmark"></i>
+                        </button>
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>      
+          </div>
+        </div>
+      </div>
+    </div>
+ </section>
+
+  <!-- Modal de addEducation -->
+  
+  <div class="modal fade" id="addEducation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Añadir Educación</h1>
+        </div>
+        <div class="modal-body">
+          <form id="">
+            <div class="mb-3">
+              <label for="inputInstitucion" class="form-label">Institución</label>
+              <input [(ngModel)]="inputInstitucion"  type="text" class="form-control" name="inputInstitucion" id="inputInstitucion" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="inputTitulo" class="form-label">Título</label>
+              <input [(ngModel)]="inputTitulo" name="inputTitulo" type="text" class="form-control" id="inputTitulo">
+            </div>
+            <div class="mb-3">
+              <label for="inputPeriodo" class="form-label">Período Educativo</label>
+              <input [(ngModel)]="inputPeriodo" name="inputPeriodo" type="text" class="form-control" id="inputPeriodo">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver atrás</button>
+          <button (click)="addLista(inputInstitucion, inputTitulo, inputPeriodo, 'education')" type="button" class="btn btn-primary" data-bs-dismiss="modal">Confirmar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de addExperience -->
+  
+  <div class="modal fade" id="addExperience" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Añadir Experiencia</h1>
+        </div>
+        <div class="modal-body">
+          <form id="">
+            <div class="mb-3">
+              <label for="inputInstitucion" class="form-label">Institución</label>
+              <input [(ngModel)]="inputInstitucion"  type="text" class="form-control" name="inputInstitucion" id="inputInstitucion" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="inputTitulo" class="form-label">Puesto</label>
+              <input [(ngModel)]="inputTitulo" name="inputTitulo" type="text" class="form-control" id="inputTitulo">
+            </div>
+            <div class="mb-3">
+              <label for="inputPeriodo" class="form-label">Período Activo</label>
+              <input [(ngModel)]="inputPeriodo" name="inputPeriodo" type="text" class="form-control" id="inputPeriodo">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver atrás</button>
+          <button (click)="addLista(inputInstitucion, inputTitulo, inputPeriodo, 'experience')" type="button" class="btn btn-primary" data-bs-dismiss="modal">Confirmar</button>
+        </div>
+      </div>
+    </div>
+  </div>

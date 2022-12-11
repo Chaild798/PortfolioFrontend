@@ -1,0 +1,42 @@
+<div class="login-box">
+
+    <h2>Inicar Sesión</h2>
+
+    <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+      <div class="user-box">
+        <input type="email" formControlName="email" name="" required="">
+        <label for="email">Email</label>
+      </div>
+
+      <div *ngIf="Email?.errors && Email?.touched">
+        <p *ngIf="Email?.hasError('required')" class="error">El mail es requerido.</p>
+      </div>
+
+      <div class="user-box">
+        <input type="password" formControlName="password" name="" required="">
+        <label for="password">Contraseña</label>
+      </div>
+
+      <div *ngIf="Password?.errors && Password?.touched">
+        <p *ngIf="Password?.hasError('required')" class="error">La contraseña es requerida.</p>
+      </div>
+
+      <a routerLink="/" type="submit" >
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Enviar
+      </a>
+
+      <a routerLink="/">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Volver
+      </a>
+
+    </form>
+
+  </div>

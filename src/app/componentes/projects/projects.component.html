@@ -1,0 +1,113 @@
+<!-- Section de proyectos -->
+
+<section id="projects">
+    <div class="card">
+      <div class="card-body">
+        <div class="projects">
+          <h2 class="h2 ab-title"><b>Proyectos</b></h2>
+          <button type="button" class="btn btn-primary modal-btn-add" data-bs-toggle="modal" data-bs-target="#addProject">
+                  <i class="fa-solid fa-square-plus"></i>
+          </button>
+          <hr class="border border-danger border-2 opacity-50 title-hr">
+          
+          <div class="row">
+
+            <div *ngFor="let proyecto of projects" class="col-sm-6">
+              <div class="card" style="width: 18rem;">
+
+                <img [src]="proyecto.imagen" class="card-img-top" alt="tienda de ropa">
+                <div class="card-body">
+                  <h5 class="card-title">{{proyecto.nombre}}</h5>
+                  <p class="card-text">{{proyecto.descripcion}}</p>
+                  <a [href]="proyecto.enlace" class="btn btn-primary">Ver</a>
+                  <button type="button" class="btn btn-primary modal-btn-edit">
+                    <i class="fa-solid fa-pen"></i>
+                  </button>
+                  <button type="button" class="btn btn-primary modal-btn-edit">
+                    <i class="fa-solid fa-square-check"></i>
+                  </button>
+                  <button type="button" class="btn btn-primary modal-btn-elmnt">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                  <button type="button" class="btn btn-primary modal-btn-elmnt">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                  </button>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6" *ngFor="let project of inputProjectArray; let indice=index;" id="project{{indice}}">
+              <div class="card" style="width: 18rem;">
+                <img [src]="project[3]" class="card-img-top">
+                <div *ngIf="llamarContentEditable(indice)==false" class="card-body">
+                  <h5 class="card-title">{{project[0]}}</h5>
+                  <p class="card-text">{{project[1]}}</p>
+                  <a [href]="project[2]" class="btn btn-primary">Ver</a>
+                </div>
+                <div *ngIf="llamarContentEditable(indice)==true" contenteditable=true class="card-body">
+                  <h5 id="project-editablename{{indice}}" class="card-title">{{project[0]}}</h5>
+                  <p id="project-editabledesc{{indice}}" class="card-text">{{project[1]}}</p>
+                  <a [href]="project[2]" class="btn btn-primary">Ver</a>
+                </div>
+
+                <div class="card-body">
+                  <button *ngIf="llamarContentEditable(indice)==false" (click)="alterEdit(indice)" type="button" class="btn btn-primary modal-btn-edit">
+                    <i class="fa-solid fa-pen"></i>
+                  </button>
+                  <button *ngIf="llamarContentEditable(indice)==true" (click)="confirmarAlterEdit('project-editablename'+indice, 'project-editabledesc'+indice, indice)" type="button" class="btn btn-primary modal-btn-edit">
+                    <i class="fa-solid fa-square-check"></i>
+                  </button>
+                  <button *ngIf="llamarContentEditable(indice)==false" (click)="eliminateProject('project'+indice, indice)" type="button" class="btn btn-primary modal-btn-elmnt">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                  <button *ngIf="llamarContentEditable(indice)==true" (click)="alterEdit(indice)" type="button" class="btn btn-primary modal-btn-elmnt">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                  </button>
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- modal de addProject -->
+
+  <div class="modal fade" id="addProject" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Añadir Proyecto</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="login-form">
+            <div class="mb-3">
+              <label for="inputProjectName" class="form-label">Nombre del proyecto</label>
+              <input [(ngModel)]="inputProjectName" type="text" class="form-control" name="inputProjectName" id="inputProjectName" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="inputProjectDescription" class="form-label">Descripcion del proyecto</label>
+              <div class="input-group">
+                <textarea [(ngModel)]="inputProjectDescription" class="form-control" name="inputProjectDescription" aria-label="With textarea"></textarea>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label  for="inpuProyectAttach" class="form-label">Enlace del proyecto</label>
+              <input [(ngModel)]="inputProjectAttach" type="text" class="form-control" name="inpuProyectAttach" id="inpuProyectAttach" >
+            </div>
+            <div class="mb-3">
+              <label for="inputProjectPicture" class="form-label">Ruta de la imagen del proyecto</label>
+              <input [(ngModel)]="inputProjectPicture" type="text" class="form-control" name="inputProjectPicture" id="inputProjectPicture" >
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver atrás</button>
+          <button (click)="addProject(inputProjectName, inputProjectDescription, inputProjectAttach, inputProjectPicture)" type="button" class="btn btn-primary" data-bs-dismiss="modal">Confirmar</button>
+        </div>
+      </div>
+    </div>
+  </div>

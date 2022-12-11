@@ -1,0 +1,17 @@
+<!-- Seccion de la cabecera -->
+  
+<section id="#home">
+    <div class="card banner-card">
+      <div class="card-body banner-card">
+        <img [src]="persona.banner" class="banner" alt="">
+        <div class="profile-container">
+          <img [src]="persona.foto" class="pfp mx-auto d-block">
+          <h1 class="text-center display-4"><b>{{persona.nombre}}</b></h1>
+          <p class="text-center h3">{{persona.actividad}}</p>
+        </div>
+        <button type="button" class="btn btn-primary modal-btn-edit">
+          <i class="fa-solid fa-pen"></i>
+        </button>
+      </div>
+    </div>
+  </section>

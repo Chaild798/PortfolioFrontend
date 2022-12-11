@@ -1,0 +1,10 @@
+.about-me-edit {
+    --bs-btn-border-color: rgb(6, 194, 22);
+    border: 1px solid rgb(6, 194, 22) !important;
+    margin-right: 10px;
+}
+
+.about-me-elmnt {
+    --bs-btn-border-color: rgb(209, 14, 14);
+    border: 1px solid rgb(209, 14, 14) !important;
+}

@@ -1,0 +1,108 @@
+{
+    "persona": {
+        "nombre": "Martin Calsina",
+        "actividad": "Estudiante de Ingenieria en Informática",
+        "foto": "assets/img/spinel.jpg",
+        "banner": "assets/img/banner.jpg"
+    },
+    
+    "aboutMe": "este es un texto sujeto a modificaciones y tal, ahora mismo, no sé qué poner",
+
+    "education": [
+        {
+            "id":1,
+            "institucion": "Escuela Superior del Comercio Carlos Pellegrini",
+            "titulo": "Perito Comercial",
+            "periodo": "2018-2022"
+        },
+        {
+            "id":2,
+            "institucion": "Facultad de Ingenieria de la Universidad de Buenos Aires",
+            "titulo": "Estudiante de Ingenieria en Informática",
+            "periodo": "2023-presente"
+        }
+    ],
+
+    "experience": [
+        {
+            "id":1,
+            "institucion": "McDonald's",
+            "cargo": "Director Ejecutivo",
+            "periodo": "2019-2022"
+        }
+    ],
+
+    "frontEnd": [
+        {
+            "id": 1,
+            "tech": "HTML",
+            "simbolo": "fa-brands fa-html5",
+            "progreso": "20%"
+        },
+        {
+            "id": 2,
+            "tech": "CSS - Bootstrap",
+            "simbolo": "fa-brands fa-bootstrap",
+            "progreso": "75%"
+        },
+        {
+            "id": 3,
+            "tech": "JavaScript",
+            "simbolo": "fa-brands fa-js",
+            "progreso": "73%"
+        },
+        {
+            "id": 4,
+            "tech": "TypeScript - Angular",
+            "simbolo": "fa-brands fa-angular",
+            "progreso": "30%"
+        }
+    ],
+
+    "backEnd": [
+        {
+            "id": 1,
+            "tech": "MySQL",
+            "simbolo":"fas fa-database",
+            "progreso": "75%"
+        },
+        {
+            "id": 2,
+            "tech": "Java - SpringBoot",
+            "simbolo": "fa-brands fa-java",
+            "progreso": "23%"
+        }
+    ],
+
+    "softSkills": [
+        {
+            "id": 1,
+            "skill": "Resiliencia",
+            "simbolo": "fa-solid fa-lightbulb",
+            "progreso": "80%"
+        },
+        {
+            "id": 2,
+            "skill": "Puntualidad",
+            "simbolo": "fa-regular fa-clock",
+            "progreso": "80%"
+        }
+    ],
+
+    "projects": [
+        {
+            "id": 1,
+            "nombre": "Gestor de tienda de ropa",
+            "descripcion": "Utilizando PHP, MySQL y HTML, fue un trabajo práctico propio realizado en la materia de Programación en mi último año de secundaria. Permite agregar productos, proveedores, clientes, así como eliminarlos, modificarlos y facturar",
+            "enlace": "github.com",
+            "imagen": "assets/img/tienda-de-ropa.jpg"
+        },
+        {
+            "id": 2,
+            "nombre": "Gestor de biblioteca",
+            "descripcion": "Utilizando PHP, MySQL y HTML, fue un trabajo práctico propio realizado en la materia de Programación en mi último año de secundaria. Permite agregar libros, prestamos, clientes, así como eliminarlos, modificarlos y facturar",
+            "enlace": "github.com",
+            "imagen": "assets/img/biblioteca.jpg"
+        }
+    ]
+}

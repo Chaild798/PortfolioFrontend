@@ -1,0 +1,104 @@
+<!-- MODALES -->
+
+  <!-- Modal del Header -->
+
+  <div class="modal fade" id="updateHeader" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar Perfil</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="">
+            <div class="mb-3">
+              <label for="inputName" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="inputName" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="inputEpigrafe" class="form-label">Epígrafe</label>
+              <input type="text" class="form-control" id="inputEpigrafe">
+            </div>
+            <div class="mb-3">
+              <label for="inputProfilePicture" class="form-label">Foto de Perfil</label>
+              <input type="file" class="form-control" id="inputProfilePicture">
+            </div>
+            <div class="mb-3">
+              <label for="inputBannerPicture" class="form-label">Foto de Banner</label>
+              <input type="file" class="form-control" id="inputBannerPicture">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary" form="login-form">Enviar</button>
+        </div>    
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal del Login -->
+
+  <div class="modal fade" id="login-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Iniciar Sesión</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="login-form">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary" form="login-form">Enviar</button>
+        </div>    
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de updateProjects -->
+  
+  <div class="modal fade" id="updateProjects" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Campo</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="login-form">
+            <div class="mb-3">
+              <label for="inputProjectName" class="form-label">Nombre del proyecto</label>
+              <input type="text" class="form-control" id="inputProjectName" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="inputProjectDescription" class="form-label">Descripcion del proyecto</label>
+              <div class="input-group">
+                <textarea class="form-control" name="inputProjectDescription" aria-label="With textarea"></textarea>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="inpuProyectAttach" class="form-label">Enlace del proyecto</label>
+              <input type="text" class="form-control" id="inpuProyectAttach">
+            </div>
+            <div class="mb-3">
+              <label for="inputProjectPicture" class="form-label">Imagen del proyecto</label>
+              <input type="file" class="form-control" id="inputProjectPicture">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver atrás</button>
+          <button type="button" class="btn btn-primary">Confirmar</button>
+        </div>
+      </div>
+    </div>
+  </div>
